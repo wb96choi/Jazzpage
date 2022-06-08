@@ -1,0 +1,187 @@
+/* style.css */
+/*  
+  main color: #348e4c;
+*/
+:root {
+  --main-color: #354649;
+  --second-color: #E0E7E9;
+  --text-color: #6C7A89;
+  --heading1: 50px;
+  --heading2: 40px;
+  --base-font-size: 18px;
+}
+
+/* 초기화 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::before,
+.clearfix::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+body {
+  font-size: var(--base-font-size);
+  font-family: 'Nanum Myeongjo', serif;
+  color: var(--text-color);
+}
+html,
+body {
+  height: 100%;
+}
+h1 {
+  font-size: var(--heading1);
+}
+h2 {
+  font-size: var(--heading2);
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+#main-header {
+  width: 100%;
+  height: 60px;
+  background: var(--second-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+#main-header > h1 {
+  position: absolute;
+  left: 30px;
+  top: -13px;
+}
+#main-header h1 img {
+  width: 150px;
+  height: 30px;
+}
+/* 메뉴 */
+#main-header > nav {
+  position: absolute;
+  right: 30px;
+  top: 0px;
+  font-weight: 700;
+}
+#main-header > nav > ul {
+  list-style: none;
+}
+#main-header > nav > ul > li {
+  display: inline-block;
+  margin-left: 1em;
+  position: relative;
+  text-align: center;
+}
+#main-header > nav > ul > li a {
+  width: 150px;
+  display: block;
+  padding: 20px 15px;
+  height: 60px;
+  line-height: 20px;
+}
+/* 메뉴 애니메이션 */
+#main-header > nav > ul > li a:hover,
+#main-header > nav > ul > li a:focus {
+  background-color: var(--main-color);
+  color: #fff;
+}
+#main-header > nav > ul > li a:active {
+  background-color: var(--main-color);
+  color: #fff;
+}
+/* 서브메뉴 */
+#main-header > nav > ul > li ul.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  background: var(--second-color);
+  list-style: none;
+}
+#main-header > nav > ul > li ul.submenu li a {
+  padding: 10px;
+}
+#main-header > nav > ul > li ul.submenu li a:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.main {
+  width: 100%;
+  height: calc(100% - 60px);
+  background: #ccc;
+}
+.main .col {
+  width: calc(100% / 4);
+  height: 100%;
+  background: var(--main-color);
+  position: relative;
+}
+.main .col h2 {
+  background: #e0e7e969;
+  text-align: center;
+  color: var(--main-color);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  /* 중앙수직위치 = 50% - 요소높이 1/2 */
+  /* 109px = h2높이와 패딩값을 더함 */
+  top: calc(70% - 109px / 2);
+}
+
+.main .col h2 span {
+  display: block;
+  font-size: small;
+  font-weight: normal;
+}
+
+.btn_link {
+  background-color: #e0e7e969;
+  color: var(--main-color);
+  width: 125px;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 1rem;
+  border: 1px solid #354649;
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 124px / 2);
+}
+.btn_link:hover,
+.btn_link:active {
+  background-color: #354649;
+  color: #fff;
+  border: 1px solid #e0e7e969;
+}
+.main .col:first-child {
+  background-image: url(/Jazzpage-main/home/images/johncoltrane.jpg);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.main .col:nth-child(2) {
+  background-image: url(/Jazzpage-main/home/images/ellafitzgerald.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main .col:nth-child(3) {
+  background-image: url(/Jazzpage-main/home/images/chetbaker.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main .col:nth-child(4) {
+  background-image: url(/Jazzpage-main/home/images/billevans.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#section1 {
+  float: left;
+}
