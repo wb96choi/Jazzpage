@@ -54,7 +54,7 @@ a {
 #main-header > h1 {
   position: absolute;
   left: 30px;
-  top: -13px;
+  top: 15px;
 }
 #main-header h1 img {
   width: 150px;
